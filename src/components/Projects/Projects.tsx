@@ -1,40 +1,55 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import Project from "./Project";
+import projectData, { projectType } from "./projectData";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DAMThumbnail from "../../assets/DAM thumbnail.png";
+import { useState } from "react";
+const container = {
+  visible: {
+    transition: { staggerChildren: 0.3 },
+  },
+};
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  // Toggle function to show or hide all projects
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
   return (
     <div className="py-24 flex flex-col gap-8" id="Projects-Container">
       <h1 className="text-darkBlue text-6xl font-jockey text-center">
         PROJECTS
       </h1>
-      <div id="Projects" className="flex justify-center">
-        <div className="bg-lightBlue rounded-lg lg:p-12 p-4 w-5/6 lg:w-3/5 flex flex-col gap-4">
-          <a
-            href="https://inventorymanagementsystemdemo-8s2vny4vx.vercel.app/inventory"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={DAMThumbnail} className="rounded-lg"></img>
-          </a>
-          <a
-            href="https://inventorymanagementsystemdemo-8s2vny4vx.vercel.app/inventory"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h1 className="text-white font-jockey md: text-3xl lg:text-5xl text-center">
-              Inventory Management System
-            </h1>
-          </a>
-
-          <div className="flex flex-col items-center justify-center">
-            <p className="text-gray-600">See More...</p>
-            <FontAwesomeIcon
-              icon={faChevronDown}
-              className="text-white text-3xl"
+      <motion.div
+        id="Projects"
+        className="flex justify-center flex-col items-center gap-10"
+        variants={container}
+      >
+        {projectData
+          .slice(0, showAll ? projectData.length : 3) // Show all if `showAll` is true, otherwise only show first 3
+          .map((project: projectType, i: number) => (
+            <Project
+              key={i}
+              name={project.name}
+              image={project.image}
+              description={project.description}
+              url={project.url}
             />
-          </div>
-        </div>
+          ))}
+      </motion.div>
+      <div
+        className="flex flex-col  text-3xl items-center justify-center cursor-pointer mt-8"
+        onClick={toggleShowAll}
+      >
+        <p className="text-darkBlue">
+          {showAll ? "See Less" : `See ${projectData.length - 3} More`}
+        </p>
+        <FontAwesomeIcon
+          icon={showAll ? faChevronUp : faChevronDown}
+          className=" text-darkBlue "
+        />
       </div>
     </div>
   );
