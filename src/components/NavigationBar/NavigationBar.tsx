@@ -18,7 +18,7 @@ const NavigationBar = () => {
                 Projects
               </p>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link href="#Certifications-Container">
               <p className="text-white text-3xl hover:bg-navigationBg rounded-full px-4 py-2 text-center">
                 Certifications
               </p>

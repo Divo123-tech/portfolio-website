@@ -18,7 +18,7 @@ const Projects = () => {
     setShowAll(!showAll);
   };
   return (
-    <div className="py-24 flex flex-col gap-8" id="Projects-Container">
+    <div className="pt-24 flex flex-col gap-8" id="Projects-Container">
       <h1 className="text-darkBlue text-6xl font-jockey text-center">
         PROJECTS
       </h1>

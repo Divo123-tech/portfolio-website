@@ -17,7 +17,7 @@ const Project = ({ name, image, description, url }: projectType) => {
 
   return (
     <motion.div
-      className="bg-lightBlue rounded-lg lg:p-12 p-4 w-5/6 lg:w-3/5 flex flex-col gap-4"
+      className="bg-lightBlue rounded-lg lg:p-12 p-4 w-5/6 lg:w-3/5 flex flex-col gap-4 shadow-lg border-black border-1"
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.3 }}
@@ -25,7 +25,7 @@ const Project = ({ name, image, description, url }: projectType) => {
       variants={childVariant}
     >
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <img src={image} className="rounded-lg" alt="Thumbnail" />
+        <img src={image} className="rounded-lg " alt="Thumbnail" />
       </a>
       <a href={url} target="_blank" rel="noopener noreferrer">
         <h1 className="text-white font-jockey text-3xl lg:text-5xl text-center">
