@@ -1,6 +1,6 @@
 import DAMThumbnail from "../../assets/DAM thumbnail.png";
 import TravelMateThumbnail from "../../assets/TravelMate.png";
-import EvoGymThumbnail from "../../assets/EvoGym.png";
+import EvoGymThumbnail from "../../assets/Evogym.png";
 import SuperSnooker from "../../assets/superSnooker.png";
 import DrawingApp from "../../assets/drawingApp.png";
 import LBJDA from "../../assets/LBJDA.png";
