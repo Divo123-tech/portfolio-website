@@ -3,6 +3,7 @@ import TravelMateThumbnail from "../../assets/TravelMate.png";
 import EvoGymThumbnail from "../../assets/EvoGym.png";
 import SuperSnooker from "../../assets/superSnooker.png";
 import DrawingApp from "../../assets/drawingApp.png";
+import LBJDA from "../../assets/LBJDA.png";
 export type projectType = {
   name: string;
   image: any;
@@ -36,6 +37,13 @@ const projectData: projectType[] = [
     url: "https://github.com/Divo123-tech/Evogym",
     description:
       "I made a home page for a mock gym that utilizes React, Typescript, and was deployed onto Netifly. This app was meant as a test of my abilities to design and develop an aesthetic landing page with smooth animations and effects. The page also includes a form that connects to an email API that sends me and email!",
+  },
+  {
+    name: "Lebron James Data Analysis",
+    image: LBJDA,
+    url: "https://github.com/Divo123-tech/Lebron-James-Data-Analysis/blob/main/Midterm.ipynb",
+    description:
+      "A data analysis project done in Jupyter Notebook using Pandas, Numpy Matplotlib and BeautifulSoup, to scrape data from basketball reference, and analyze the winning impact of Lebron James over his 20 year NBA career.",
   },
   {
     name: "Super Snooker",

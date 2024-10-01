@@ -12,6 +12,9 @@ export default {
         navigationBg: "#6771A7",
         darkBlue: "#23629D",
       },
+      perspective: {
+        1000: "1000px",
+      },
     },
   },
   plugins: [],

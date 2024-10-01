@@ -39,18 +39,20 @@ const Projects = () => {
             />
           ))}
       </motion.div>
-      <div
-        className="flex flex-col  text-3xl items-center justify-center cursor-pointer mt-8"
-        onClick={toggleShowAll}
-      >
-        <p className="text-darkBlue">
-          {showAll ? "See Less" : `See ${projectData.length - 3} More`}
-        </p>
-        <FontAwesomeIcon
-          icon={showAll ? faChevronUp : faChevronDown}
-          className=" text-darkBlue "
-        />
-      </div>
+      <a href={showAll ? undefined : "#Certifications-Container"}>
+        <div
+          className="flex flex-col  text-3xl items-center justify-center cursor-pointer mt-8"
+          onClick={toggleShowAll}
+        >
+          <p className="text-darkBlue">
+            {showAll ? "See Less" : `See ${projectData.length - 3} More`}
+          </p>
+          <FontAwesomeIcon
+            icon={showAll ? faChevronUp : faChevronDown}
+            className=" text-darkBlue "
+          />
+        </div>
+      </a>
     </div>
   );
 };

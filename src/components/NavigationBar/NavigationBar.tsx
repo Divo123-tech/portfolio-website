@@ -23,12 +23,16 @@ const NavigationBar = () => {
                 Certifications
               </p>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link href="#Skills-Container">
               <p className="text-white text-3xl hover:bg-navigationBg rounded-full px-4 py-2 text-center">
                 Skills
               </p>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link
+              href="https://docs.google.com/document/d/15h8FofLbURhMyOsKn3d6ENa4-gT5jSW-ymGMser99sU/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="text-white text-3xl hover:bg-navigationBg rounded-full px-4 py-2 text-center">
                 Resume
               </p>
