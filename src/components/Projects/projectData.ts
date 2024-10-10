@@ -1,5 +1,6 @@
 import DAMThumbnail from "../../assets/DAM thumbnail.png";
 import TravelMateThumbnail from "../../assets/TravelMate.png";
+import projectManagement from "../../assets/projectManagement.png";
 import EvoGymThumbnail from "../../assets/Evogym.png";
 import SuperSnooker from "../../assets/superSnooker.png";
 import DrawingApp from "../../assets/drawingApp.png";
@@ -30,6 +31,13 @@ const projectData: projectType[] = [
     url: "https://github.com/Divo123-tech/TravelMate",
     description:
       "TravelMate is a full-stack, responsive MERN web application utilizing modern technologies like React Bootstrap, Tailwind CSS, and TypeScript. As the Tech Lead, I guided the team through Agile development. The app integrates over 12 RESTful APIs for real-time data on hotels, flights, and countries, with OAuth for secure authentication and comprehensive testing for stability, and Socket.io for real-time collaboration. I Fully Dockerized and deployed the application to Google Cloud Run,",
+  },
+  {
+    name: "Task Flow",
+    image: projectManagement,
+    description:
+      "Task Flow is a full stack project management platform that is built using Next.js, Prisma, PostgreSQL, and deployed using 5+ AWS services such as S3, EC2, Lambda, Cognito and AWS RDS. The app allows users to create projects and see them in 4 different views such as gantt charts and trello boads with built in drag and drop functionality.",
+    url: "https://github.com/Divo123-tech/Project-Management",
   },
   {
     name: "EvoGym",
